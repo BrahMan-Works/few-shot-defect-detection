@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environments
+env/
+venv/
+.sej_project/
+.conda/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large data (DO NOT PUSH)
+data/
+models/
+
+# Jupyter (if any)
+.ipynb_checkpoints/
+
+# Build artifacts
+dist/
+build/
+*.spec
