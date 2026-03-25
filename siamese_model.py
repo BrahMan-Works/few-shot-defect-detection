@@ -9,7 +9,6 @@ class SiameseNetwork(nn.Module):
         backbone = models.resnet18(weights=models.ResNet18_Weights.IMAGENET1K_V1)
         backbone.fc = nn.Identity()
 
-        # Freeze all layers except last block
         for name, param in backbone.named_parameters():
             if "layer4" not in name:
                 param.requires_grad = False
