@@ -57,14 +57,12 @@ def open_image():
     if not file_path:
         return
 
-    # Show image
     img = Image.open(file_path)
     img_resized = img.resize((300, 300))
     tk_img = ImageTk.PhotoImage(img_resized)
     img_label.configure(image=tk_img)
     img_label.image = tk_img
-
-    # Predict
+    
     label, dist = predict(file_path)
     result_label.config(text=f"{label} (Distance: {dist:.3f})")
 
